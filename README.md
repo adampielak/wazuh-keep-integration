@@ -42,8 +42,7 @@ chown root:wazuh /var/ossec/integrations/custom-keep.py /var/ossec/integrations/
 
 ```
 
-5. Update the `ossec.conf` File:
-Append the following configuration to the `/var/ossec/etc/ossec.conf` file to enable the integration with Keep:
+5. Update the `ossec.conf` File. Append the following configuration to the `/var/ossec/etc/ossec.conf` file to enable the integration with Keep:
 
 ```bash
   <ossec_config>
