@@ -4,7 +4,7 @@ Wazuh integration to send alerts to Keep (open-source alert management and AIOps
 
 ## Installation and Setup
 
-1. Clone the Repository oraz download custom scripts
+1. Clone the Repository or just download custom scripts:
 
 ```bash
 cd /var/ossec/integrations
@@ -13,7 +13,7 @@ wget -O custom-keep https://raw.githubusercontent.com/adampielak/wazuh-keep-inte
 
 ```
 
-2. After cloning navigate to the script's directory and open it:
+2. After cloning navigate to the integration script's directory and open it:
 
 ```bash
 cd /var/ossec/integrations
@@ -34,7 +34,7 @@ json_options = {}
 
 ```
 
-4. Give it the right ownership and permissions
+4. Give it the right ownership and permissions:
 
 ```bash
 chmod 750 /var/ossec/integrations/custom-keep.py /var/ossec/integrations/custom-keep
@@ -42,8 +42,9 @@ chown root:wazuh /var/ossec/integrations/custom-keep.py /var/ossec/integrations/
 
 ```
 
-5. Update the `ossec.conf` File
+5. Update the `ossec.conf` File:
 Append the following configuration to the `/var/ossec/etc/ossec.conf` file to enable the integration with Keep:
+
 ```bash
   <ossec_config>
     <!-- Keep integration -->
