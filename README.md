@@ -25,12 +25,10 @@ vi custom-keep.py
 - Adding Custom Environment Fields:
 
 ```bash
-# Global vars
-debug_enabled = False
-environment = "linuxmafia" #<- here
-pwd = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-json_alert = {}
-json_options = {}
+# Hardcode your environment value here
+environment = "ENV"
+url = "https://wazuh.siem.local"
+ticket_url = "https://jira.prod.local"
 
 ```
 
