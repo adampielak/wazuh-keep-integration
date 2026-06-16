@@ -1,5 +1,22 @@
-# Wazuh & Keep integration
-Wazuh integration to send alerts to Keep (open-source alert management and AIOps platform) with custom environment field, as described in [seamless integration between Keep and Wazuh](https://docs.keephq.dev/providers/documentation/wazuh-provider/)
+# wazuh-keep-integration
+
+![Wazuh](https://img.shields.io/badge/wazuh-4.x-005571)
+![Keep](https://img.shields.io/badge/keep-AIOps-purple)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+Wazuh integration to forward alerts to [Keep](https://www.keephq.dev/) — open-source alert management and AIOps platform. Adds custom `environment`, `url`, and `ticket_url` fields to every alert for multi-tenant deployments.
+
+## Flow
+
+```
+Wazuh alert (level ≥ 11)
+        │
+        ▼
+custom-keep integration script
+        │
+        ▼
+Keep /alerts/event endpoint → alert enrichment, dedup, routing
+```
 
 
 ## Installation and Setup
